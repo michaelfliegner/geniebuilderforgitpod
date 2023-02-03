@@ -4,13 +4,9 @@ tasks:
   - init: echo 'PATH_add /home/gitpod/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'PATH_add ~/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'export SEARCHLIGHT_USERNAME="gitpod"' >> /workspace/.envrc \
-          && direnv allow /workspace \
-          && cp /workspace/.envrc /home/gitpod \
-          && direnv allow /home/gitpod
+          && cp /workspace/.envrc /home/gitpod 
           
   - command: julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();include("testsCreateContract.jl")'
-  - command: cd /home/gitpod/.julia ; mkdir geniebuilder; mkdir geniebuilder/apps \
-            && cd geniebuilder/apps; git clone https://github.com/michaelfliegner/GenieBuildLifeProto
 
 ports:
   - name: postgres
