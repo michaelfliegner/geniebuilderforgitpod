@@ -8,4 +8,5 @@ RUN sudo apt-get update && sudo apt-get install -y direnv \
   && mkdir -p .config/direnv \
   && echo '[whitelist]' > .config/direnv/config.toml \
   && echo 'prefix = [ "/workspace" ]' >> .config/direnv/config.toml 
+  && echo 'prefix = [ "~/.julia/geniebuilder/apps/GenieBuildLifeProto" ]' >> .config/direnv/config.toml 
   
