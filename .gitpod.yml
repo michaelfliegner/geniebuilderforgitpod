@@ -6,8 +6,9 @@ tasks:
           && echo 'PATH_add ~/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'export SEARCHLIGHT_USERNAME="gitpod"' >> /workspace/.envrc \
           && cd /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts \
-          && julia --startup-file=no --depwarn=no /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts/updategb.jl
-          && git clone https://github.com/michaelfliegner/geniebuiltlifeproto \
+          && julia --startup-file=no --depwarn=no /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts/rungb.jl \
+          && cd ~/.julia/geniebuilder/apps/
+          && git clone https://github.com/michaelfliegner/geniebuiltlifeproto  \
           && julia -e 'using Pkg; Pkg.activate("."); Pkg.instantiate();include("testsCreateContract.jl")'
 
 ports:
