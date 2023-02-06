@@ -1,3 +1,4 @@
+
 image:
   file: .gitpod.Dockerfile
 tasks:
@@ -15,3 +16,7 @@ ports:
     port: 5432
     visibility: private
     onOpen: ignore
+
+vscode:
+  extensions:
+    - GenieBuilder.geniebuilder-insider
