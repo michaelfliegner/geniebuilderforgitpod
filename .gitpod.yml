@@ -4,8 +4,6 @@ tasks:
   - init: echo 'PATH_add /home/gitpod/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'PATH_add ~/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'export SEARCHLIGHT_USERNAME="gitpod"' >> /workspace/.envrc \
-          # && mkdir .julia; mkdir .julie/geniebuilder ; mkdir .julia/geniebuilder/apps \
-          # && cd /home/gitpod/.julia/geniebuilder/apps \
           && cd /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts \
           && julia --startup-file=no --depwarn=no /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts/updategb.jl
           && git clone https://github.com/michaelfliegner/geniebuiltlifeproto \
@@ -17,5 +15,3 @@ ports:
     port: 5432
     visibility: private
     onOpen: ignore
-
-
