@@ -4,8 +4,8 @@ image:
 tasks:
   - init: echo 'PATH_add /home/gitpod/julia-1.8.2/bin' > /workspace/.envrc \
           && echo 'PATH_add ~/julia-1.8.2/bin' > /workspace/.envrc \
-          && echo 'export SEARCHLIGHT_USERNAME="gitpod"' >> /workspace/.envrc \
-          && cd /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts \
+          && echo 'export SEARCHLIGHT_USERNAME="gitpod"' >> /workspace/.envrc 
+  -  command: cd /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts \
           && julia --startup-file=no --depwarn=no /workspace/.vscode-remote/extensions/geniebuilder.geniebuilder-insider-0.3.1-universal/scripts/rungb.jl \
           && cd ~/.julia/geniebuilder/apps/ \
           && git clone https://github.com/michaelfliegner/geniebuiltlifeproto  \
